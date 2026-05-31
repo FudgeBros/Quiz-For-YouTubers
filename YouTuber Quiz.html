@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ultimate YouTuber Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+    }
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 25px 50px -12px rgb(249 115 22 / 0.3);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .retention-bar {
+      transition: height 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-lg border-b border-zinc-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <!-- Small Beast Icon -->
+        <div class="w-9 h-9 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center text-3xl">
+          🦁
+        </div>
+        <h1 class="text-3xl font-bold tracking-tighter">THE ULTIMATE<br><span class="text-orange-400 text-2xl">YOUTUBER GUIDE</span></h1>
+      </div>
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#metrics" class="hover:text-orange-400 transition-colors">Metrics</a>
+        <a href="#retention" class="hover:text-orange-400 transition-colors">Retention</a>
+        <a href="#structure" class="hover:text-orange-400 transition-colors">Structure</a>
+        <a href="#tips" class="hover:text-orange-400 transition-colors">Tips</a>
+        <button onclick="showQuiz()"
+                class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full font-semibold transition-all">
+          Take Quiz
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg pt-32 pb-32 min-h-screen flex items-center">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 bg-zinc-900 border border-orange-500/30 rounded-full px-6 py-2 mb-8">
+        <i class="fas fa-fire text-orange-500 animate-pulse"></i>
+        <span class="text-orange-400 font-medium">Inspired by MrBeast Production Guide</span>
+      </div>
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6 fade-in visible">
+        THE ULTIMATE<br><span class="text-orange-400">YOUTUBER GUIDE</span>
+      </h1>
+      <p class="text-2xl text-zinc-400 max-w-3xl mx-auto mb-12 fade-in visible" style="animation-delay: 200ms">
+        Master YouTube Analytics & Virality with MrBeast's proven strategies
+      </p>
+      <button onclick="showQuiz()"
+              class="bg-white text-black font-bold text-xl px-10 py-5 rounded-3xl hover:bg-orange-400 hover:text-white transition-all duration-300 flex items-center gap-3 mx-auto group">
+        <span>START LEARNING →</span>
+        <i class="fas fa-arrow-right group-hover:translate-x-2 transition"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section id="metrics" class="py-24 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-4 fade-in">The 3 Metrics That Matter</h2>
+      <p class="text-center text-zinc-400 text-xl mb-16 fade-in">From Jimmy's 20,000+ hours studying virality</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-10 card-hover fade-in">
+          <i class="fas fa-mouse-pointer text-5xl text-orange-500 mb-6"></i>
+          <h3 class="text-4xl font-bold mb-2">CTR</h3>
+          <p class="text-orange-400 text-2xl mb-4">Click-Through Rate</p>
+          <p class="text-zinc-400">Percentage of people who click your thumbnail after seeing it.</p>
+          <div class="mt-8 text-sm italic">"I Spent 50 Hours in Ketchup" beats "I Spent 50 Hours in My Yard"</div>
+        </div>
+        <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-10 card-hover fade-in" style="animation-delay: 150ms">
+          <i class="fas fa-clock text-5xl text-orange-500 mb-6"></i>
+          <h3 class="text-4xl font-bold mb-2">AVD</h3>
+          <p class="text-orange-400 text-2xl mb-4">Average View Duration</p>
+          <p class="text-zinc-400">How long people actually watch. The #1 most important metric.</p>
+        </div>
+        <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-10 card-hover fade-in" style="animation-delay: 300ms">
+          <i class="fas fa-percentage text-5xl text-orange-500 mb-6"></i>
+          <h3 class="text-4xl font-bold mb-2">AVP</h3>
+          <p class="text-orange-400 text-2xl mb-4">Average View Percentage</p>
+          <p class="text-zinc-400">What % of your video the audience watches on average.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETENTION -->
+  <section id="retention" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-5xl font-bold mb-8 fade-in">Retention Graph Mastery</h2>
+          <div class="space-y-8">
+            <div class="flex gap-6 fade-in">
+              <span class="text-4xl">📈</span>
+              <div><strong class="text-orange-400">Flat = Gold</strong><p class="text-zinc-400">Viewers are locked in.</p></div>
+            </div>
+            <div class="flex gap-6 fade-in">
+              <span class="text-4xl">📉</span>
+              <div><strong>Dips = Problems</strong><p class="text-zinc-400">Fix these moments immediately.</p></div>
+            </div>
+            <div class="flex gap-6 fade-in">
+              <span class="text-4xl">⚡</span>
+              <div><strong>Spikes = Wow Moments</strong><p class="text-zinc-400">Big spectacles and re-engagements.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="retention-graph bg-zinc-900 rounded-3xl p-8">
+          <div class="text-center mb-4 text-zinc-400">Typical MrBeast Video Retention</div>
+          <div class="h-80 flex items-end gap-2 px-8 relative bg-black/50 rounded-2xl overflow-hidden">
+            <div class="retention-bar w-full h-[88%] bg-gradient-to-t from-orange-500 to-amber-400 rounded-t"></div>
+            <div class="retention-bar w-full h-[72%] bg-gradient-to-t from-orange-500 to-amber-400 rounded-t"></div>
+            <div class="retention-bar w-full h-[65%] bg-gradient-to-t from-orange-500 to-amber-400 rounded-t"></div>
+            <div class="retention-bar w-full h-[60%] bg-gradient-to-t from-orange-500 to-amber-400 rounded-t"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO STRUCTURE -->
+  <section id="structure" class="py-24 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Video Structure Blueprint</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center p-8 bg-zinc-950 rounded-3xl card-hover">
+          <div class="text-5xl font-mono text-orange-400 mb-4">0:00</div>
+          <h4 class="font-bold text-xl">First Minute</h4>
+          <p class="text-sm text-zinc-400 mt-3">Match expectations. Hook hard. Most important 60 seconds.</p>
+        </div>
+        <div class="text-center p-8 bg-zinc-950 rounded-3xl card-hover">
+          <div class="text-5xl font-mono text-orange-400 mb-4">1-3</div>
+          <h4 class="font-bold text-xl">Crazy Progression</h4>
+          <p class="text-sm text-zinc-400 mt-3">Compress time. Show multiple days fast.</p>
+        </div>
+        <div class="text-center p-8 bg-zinc-950 rounded-3xl card-hover">
+          <div class="text-5xl font-mono text-orange-400 mb-4">3:00</div>
+          <h4 class="font-bold text-xl">Re-engagement</h4>
+          <p class="text-sm text-zinc-400 mt-3">"Only MrBeast can do this" moment.</p>
+        </div>
+        <div class="text-center p-8 bg-zinc-950 rounded-3xl card-hover">
+          <div class="text-5xl font-mono text-orange-400 mb-4">6:00+</div>
+          <h4 class="font-bold text-xl">Back Half + Payoff</h4>
+          <p class="text-sm text-zinc-400 mt-3">Keep them in the lull. Strong ending.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ PAGE -->
+  <div id="quiz-page" class="hidden fixed inset-0 bg-zinc-950 z-[100] overflow-auto">
+    <div class="max-w-2xl mx-auto py-20 px-6">
+      <button onclick="hideQuiz()" class="mb-8 text-zinc-400 hover:text-white flex items-center gap-2">
+        ← Back to Guide
+      </button>
+      
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-bold mb-4">MrBeast Analytics Quiz</h2>
+        <p class="text-orange-400">Pass = $1,000 (in real life)</p>
+      </div>
+      <div id="quiz-content">
+        <!-- JS will inject questions here -->
+      </div>
+      <div id="quiz-result" class="hidden text-center py-20">
+        <h3 class="text-6xl font-bold mb-4" id="score"></h3>
+        <p class="text-2xl text-zinc-400 mb-8" id="result-text"></p>
+        <button onclick="restartQuiz()"
+                class="bg-orange-500 px-10 py-4 rounded-2xl font-bold text-lg">
+          Try Again
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center text-zinc-500 text-sm">
+    Fan-made educational project • Inspired by MrBeast's internal guide
+  </footer>
+
+  <script>
+    // Scroll animations
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      elements.forEach(el => observer.observe(el));
+    }
+
+    // Quiz Data
+    const quizQuestions = [
+      { q: "What does CTR stand for?", a: ["Click-Through Rate", "Content Time Ratio", "Creator Trend Rating"], correct: 0 },
+      { q: "Which minute of the video is the most important?", a: ["The first 60 seconds", "Minute 5-6", "The last 30 seconds"], correct: 0 },
+      { q: "What is the 'Wow Factor'?", a: ["Doing things no other creator can do", "High production value", "Funny jokes"], correct: 0 },
+      { q: "'Creativity Saves Money' — What does this mean?", a: ["Find cheaper but more creative solutions", "Spend as much money as possible", "Never use creativity"], correct: 0 },
+      { q: "What should you do when scouting locations?", a: ["Video everything", "Just take mental notes", "Only take photos"], correct: 0 }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function showQuiz() {
+      document.getElementById('quiz-page').classList.remove('hidden');
+      currentQuestion = 0;
+      score = 0;
+      loadQuestion();
+    }
+
+    function hideQuiz() {
+      document.getElementById('quiz-page').classList.add('hidden');
+    }
+
+    function loadQuestion() {
+      const q = quizQuestions[currentQuestion];
+      let html = `
+        <div class="bg-zinc-900 rounded-3xl p-10">
+          <p class="text-sm text-orange-400 mb-4">Question ${currentQuestion + 1} of ${quizQuestions.length}</p>
+          <h3 class="text-3xl font-bold mb-8">${q.q}</h3>
+          <div class="space-y-4">
+      `;
+      q.a.forEach((answer, i) => {
+        html += `
+          <button onclick="answerQuestion(${i})" 
+                  class="w-full text-left p-6 rounded-2xl border border-zinc-700 hover:border-orange-500 hover:bg-zinc-800 transition-all text-lg">
+            ${answer}
+          </button>
+        `;
+      });
+      html += `</div></div>`;
+      document.getElementById('quiz-content').innerHTML = html;
+    }
+
+    function answerQuestion(selected) {
+      if (selected === quizQuestions[currentQuestion].correct) score++;
+      currentQuestion++;
+      if (currentQuestion < quizQuestions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      const percentage = Math.round((score / quizQuestions.length) * 100);
+      let message = "";
+      if (percentage === 100) message = "You're ready to work at MrBeast! 🔥";
+      else if (percentage >= 80) message = "Excellent! You really understood the guide.";
+      else if (percentage >= 60) message = "Good job! Keep studying.";
+      else message = "Review the guide and try again!";
+      
+      document.getElementById('quiz-content').classList.add('hidden');
+      document.getElementById('quiz-result').classList.remove('hidden');
+      document.getElementById('score').textContent = `${percentage}%`;
+      document.getElementById('result-text').textContent = message;
+    }
+
+    function restartQuiz() {
+      document.getElementById('quiz-content').classList.remove('hidden');
+      document.getElementById('quiz-result').classList.add('hidden');
+      currentQuestion = 0;
+      score = 0;
+      loadQuestion();
+    }
+
+    // Initialize
+    window.onload = () => {
+      animateOnScroll();
+    };
+  </script>
+</body>
+</html> make this better and fix the bugs
